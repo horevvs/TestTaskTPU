@@ -38,7 +38,7 @@ function AlbumsList() {
                         <img src={item.url} width='220' height='140' alt='none' />
                         <p>Альбом №{item.albumId}</p> 
                         <p>фото номер {item.id}</p>
-                        <Btn> удалить</Btn>
+                        <Btn> удалить2</Btn>
                     </Img>
                 ))}
             </Container >
