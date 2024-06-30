@@ -14,8 +14,15 @@ export const FlexContainer = styled.div`
     padding: 12px;
     height:200px;
     width: 200px;
-    background: red;
+    border: 1px solid #ddd; 
     margin: 5px;
+    transition: 1.1s;
+    &:hover {
+    background-color: #ddd;
+    cursor:pointer
+    
+    
+   }
 `;
 
 export const Btn = styled.button` 
@@ -68,7 +75,7 @@ export const OpemModal = styled.div`
 
  `;
 
- export const Position = styled.div`
+export const Position = styled.div`
  position: relative;
   left: 0;
   top: 20px;

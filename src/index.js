@@ -14,9 +14,7 @@ const reducer = (state = Store, action) => {
     case 'close': {
       return {...state, shows:!state.shows  }
     }
-    // case 'add': {
-    //   return {...state, result:state.result+1 }
-    // }
+ 
     default: return state
   }
 };
@@ -37,7 +35,5 @@ root.render(
 
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+

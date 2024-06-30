@@ -6,8 +6,8 @@ import { OpemModal, Position } from "../StylesComp.js";
 
 
 function Modal(props) {
- 
-      const dispatch = useDispatch()
+
+    const dispatch = useDispatch()
 
     // наша функция которая меняет состояние  в сторе
     const hidewindow = () => {
@@ -19,7 +19,7 @@ function Modal(props) {
             <OpemModal>
                 <img src={props.digitid} alt='none' />
                 <p>  номер фотографии {props.digitid2} </p>
-                <Position onClick={hidewindow}>close</ Position>
+                <Position onClick={hidewindow}>&#x2715;</ Position>
             </OpemModal>
         </>
     );

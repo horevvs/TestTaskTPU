@@ -56,7 +56,7 @@ function AlbumsList() {
             <div>
 
                 <Headercss className={shows ? " " : "showcomponent "} >
-                    <NavLink to={`/`} >   На главную страницу</NavLink>
+                    <NavLink className={shows ? " " : "showcomponent "} to={`/`} >   На главную страницу</NavLink>
                 </Headercss>
 
             </div>
