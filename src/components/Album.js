@@ -1,7 +1,7 @@
 
 
 
-import { Container, Headercss,  Img, Btn } from "../StylesComp.js";
+import { Container, Headercss, Img, Btn, Thumbnail } from "../StylesComp.js";
 import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
@@ -10,7 +10,6 @@ function AlbumsList() {
 
     const [data, setData] = useState([]);
     const params = useParams();
-
 
 
     useEffect(() => {
@@ -35,8 +34,10 @@ function AlbumsList() {
             <Container>
                 {data.map((item) => (
                     <Img key={item.id}>
+                        <Thumbnail>
                         <img src={item.url} width='220' height='140' alt='none' />
-                        <p>Альбом №{item.albumId}</p> 
+                        </Thumbnail>
+                        <p>Альбом №{item.albumId}</p>
                         <p>фото номер {item.id}</p>
                         <Btn> удалить2</Btn>
                     </Img>
@@ -48,16 +49,3 @@ function AlbumsList() {
 }
 export default AlbumsList;
 
-
-// <Cartcontainer>
-// < Textcss>
-//     Альбом № {item.id} <br />
-// </Textcss>
-// < Textcss>
-//     Название альбома: <br /> {item.title}
-// </Textcss>
-
-
-// <NavLink to={`/${item.id}`} > Посмотреть альбом №{item.id}</NavLink>
-
-// </Cartcontainer>

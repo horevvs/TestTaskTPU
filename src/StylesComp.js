@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-padding-top: 22px;
+padding-top: 23px;
 justify-content: center;
  display:flex;
  flex-wrap: wrap;
@@ -38,12 +38,26 @@ export const Btn = styled.button`
 
 
 
+export const Thumbnail = styled.div`
+  border: 1px solid #ddd; 
+  border-radius: 4px;  
+  padding: 2px; 
+   &:hover {
+     border: 1px solid grey; 
+     cursor:pointer
+   }
+   
+`;
+
+
+
 export const Img = styled.div`
     padding: 10px;
     margin: 5px;
    text-align: center;
    font-size:15px;
    border: 2px solid black;
+   
 `;
 
 
