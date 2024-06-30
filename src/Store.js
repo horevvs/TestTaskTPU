@@ -7,6 +7,8 @@ import axios from 'axios'
 const result = await axios.get('https://jsonplaceholder.typicode.com/albums');
 
 
+
+
 let initstate = {
     // тут храним наши данные с урла
     count: result.data,
