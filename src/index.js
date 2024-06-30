@@ -11,8 +11,11 @@ import Store from './Store'
 
 const reducer = (state = Store, action) => {
   switch (action.type) {
-    // case 'increase': {
-    //   return {...state, count2:state.count2+1 }
+    case 'close': {
+      return {...state, shows:!state.shows  }
+    }
+    // case 'add': {
+    //   return {...state, result:state.result+1 }
     // }
     default: return state
   }

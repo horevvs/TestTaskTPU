@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 function AlbumsList() {
 
-    const count2 = useSelector(state => state.count2)
+    const count = useSelector(state => state.count)
 
          {/* className={show ? "  " : "  "} */}
             {/* className='showcomponent' */}
@@ -18,7 +18,7 @@ function AlbumsList() {
             <Headercss >Albums List </Headercss>
       
             <Container >
-                {count2.map((item) => (
+                {count.map((item) => (
                     <FlexContainer key={item.id}>
                         <Cartcontainer>
                             < Textcss>

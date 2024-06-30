@@ -2,6 +2,7 @@
 import '../App.css';
 
 import { Container, Headercss, Img, Btn, Thumbnail } from "../StylesComp.js";
+import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
@@ -9,12 +10,18 @@ import Modal from './Modal.js'
 
 function AlbumsList() {
 
+    //  пробрасываем со сторы наше значение
+    const shows = useSelector(state => state.shows)
+    // const result = useSelector(state => state. result)
+
+    const dispatch = useDispatch()
 
     const [data, setData] = useState([]);
     const [digit, setdigit] = useState([]);
     const [digit2, setdigit2] = useState([]);
-    const [show, setshow] = useState(true);
     const params = useParams();
+
+    console.log(shows)
 
 
     useEffect(() => {
@@ -32,22 +39,32 @@ function AlbumsList() {
     const openwindow = (url, id) => {
         setdigit(url)
         setdigit2(id)
-        setshow(!true)
+
+        console.log(shows)
     };
+
+
+    const hidewindow = () => {
+        dispatch({ type: 'close' })
+    }
+
 
     return (
         <>
-            <Headercss className={show ? " " : "showcomponent "}  >Albums List </Headercss>
-            <div className={show ? "showcomponent " : " "}>
+            <Headercss className={shows ? " " : "showcomponent "}  >Albums List </Headercss>
+            <div className={shows ? "showcomponent " : " "} >
                 <Modal digitid={digit} digitid2={digit2} />
             </div>
 
-            <div className={show ? " " : "showcomponent "} >
+            <div className={shows ? " " : "showcomponent "} >
                 <Container>
                     {data.map((item) => (
                         <Img key={item.id}>
                             <Thumbnail>
-                                <img src={item.url} onClick={() => openwindow(item.url, item.id)} width='220' height='140' alt='none' />
+                                <img src={item.url} onClick={() => {
+                                    openwindow(item.url, item.id)
+                                    hidewindow()
+                                }} width='220' height='140' alt='none' />
                             </Thumbnail>
                             <p >Альбом №{item.albumId}</p>
                             <p>фото номер {item.id}</p>
