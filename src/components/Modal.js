@@ -1,6 +1,6 @@
 
 
-import { OpemModal } from "../StylesComp.js";
+import { OpemModal, Position } from "../StylesComp.js";
 
 
 function Modal(props) {
@@ -11,8 +11,9 @@ function Modal(props) {
             <OpemModal>
                 <img src={props.digitid} alt='none' />
                 <p>  номер фотографии {props.digitid2} </p>
+                <Position>close</ Position> 
             </OpemModal>
-            <button>close</button>
+       
         </>
     );
 }

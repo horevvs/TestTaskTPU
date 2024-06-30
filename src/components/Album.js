@@ -13,7 +13,7 @@ function AlbumsList() {
     const [data, setData] = useState([]);
     const [digit, setdigit] = useState([]);
     const [digit2, setdigit2] = useState([]);
-    const [show, setshow] = useState(false);
+    const [show, setshow] = useState(true);
     const params = useParams();
 
 
@@ -29,26 +29,20 @@ function AlbumsList() {
     }, [params]);
 
 
-
     const openwindow = (url, id) => {
         setdigit(url)
         setdigit2(id)
-        setshow(true)
+        setshow(!true)
     };
-
-
-
 
     return (
         <>
-            <Headercss className={show ? "showcomponent " : " "} >Albums List </Headercss>
-            <div >
+            <Headercss className={show ? " " : "showcomponent "}  >Albums List </Headercss>
+            <div className={show ? "showcomponent " : " "}>
                 <Modal digitid={digit} digitid2={digit2} />
             </div>
 
-            {/* className="showcomponent" */}
-            <div  >
-                {/* className={show ? "showcomponent " : " "} */}
+            <div className={show ? " " : "showcomponent "} >
                 <Container>
                     {data.map((item) => (
                         <Img key={item.id}>
@@ -64,7 +58,6 @@ function AlbumsList() {
             </div>
         </>
     );
-
 }
 export default AlbumsList;
 

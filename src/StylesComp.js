@@ -46,26 +46,38 @@ export const Thumbnail = styled.div`
      border: 1px solid grey; 
      cursor:pointer
    }
-   
 `;
 
 
 
 export const Img = styled.div`
     padding: 10px;
-    margin: 5px;
+   margin: 5px;
    text-align: center;
    font-size:15px;
    border: 2px solid black;
-   
 `;
 
 export const OpemModal = styled.div`
-    padding: 10px;
-    margin: 5px;
-  
-   
-`;
+ display: flex;
+ background-color: rgba(26, 23, 23, 0.46);
+ flex-direction: column;
+ padding:7%;
+ 
+ height:800px;
+ align-items: center;
+
+ `;
+
+ export const Position = styled.div`
+ position: relative;
+  left: 0;
+  top: 20px;
+   &:hover {
+     cursor:pointer;
+     border: 1px solid black;
+   }
+ `;
 
 
 export const Headercss = styled.div`
