@@ -1,31 +1,26 @@
-import { useSelector, useDispatch } from 'react-redux';
+//импортируем хук чтобы через него обращатся в редюсер для выполнения обрабочика событий 
+import { useDispatch } from 'react-redux';
 
+// импортируем нати styled_components
 import { OpemModal, Position } from "../StylesComp.js";
 
 
 function Modal(props) {
+ 
+      const dispatch = useDispatch()
 
-   
-    const result = useSelector(state => state.result)
-
-    const dispatch = useDispatch()
-
+    // наша функция которая меняет состояние  в сторе
     const hidewindow = () => {
         dispatch({ type: 'close' })
     }
-
-
-
 
     return (
         <>
             <OpemModal>
                 <img src={props.digitid} alt='none' />
                 <p>  номер фотографии {props.digitid2} </p>
-                <p>  {result} </p>
                 <Position onClick={hidewindow}>close</ Position>
             </OpemModal>
-
         </>
     );
 }

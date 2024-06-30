@@ -7,17 +7,14 @@ import { NavLink } from "react-router-dom";
 
 
 function AlbumsList() {
-
+    //  берем наше состояние с хранилица
     const count = useSelector(state => state.count)
-
-         {/* className={show ? "  " : "  "} */}
-            {/* className='showcomponent' */}
 
     return (
         <>
             <Headercss >Albums List </Headercss>
-      
             <Container >
+                {/* мапаем  наше хранилице делаем рендер */}
                 {count.map((item) => (
                     <FlexContainer key={item.id}>
                         <Cartcontainer>
@@ -27,9 +24,8 @@ function AlbumsList() {
                             < Textcss>
                                 Название альбома: <br /> {item.title}
                             </Textcss>
-                            {/* <NavLink to={`https://jsonplaceholder.typicode.com/albums/${item.id}/photos`} > Посмотреть альбом №{item.id}</NavLink> */}
+                            {/* переходим по нагашему новому урлу чтобы отобразить  альбом */}
                             <NavLink to={`/${item.id}`} > Посмотреть альбом №{item.id}</NavLink>
-
                         </Cartcontainer>
                     </FlexContainer>
                 ))}

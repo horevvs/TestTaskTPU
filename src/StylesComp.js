@@ -63,7 +63,6 @@ export const OpemModal = styled.div`
  background-color: rgba(26, 23, 23, 0.46);
  flex-direction: column;
  padding:7%;
- 
  height:800px;
  align-items: center;
 
@@ -81,7 +80,10 @@ export const OpemModal = styled.div`
 
 
 export const Headercss = styled.div`
-    padding: 20px;
+ justify-content: center;
+ display:flex;
+   padding: 20px;
+    background-color: rgba(26, 23, 23, 0.46);
    text-align: center;
    font-size:25px
 `;
