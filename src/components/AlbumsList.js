@@ -1,5 +1,5 @@
 
-
+import '../App.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { Container, FlexContainer, Headercss, Textcss, Cartcontainer } from "../StylesComp.js";
@@ -10,12 +10,14 @@ function AlbumsList() {
 
     const count2 = useSelector(state => state.count2)
 
-
+         {/* className={show ? "  " : "  "} */}
+            {/* className='showcomponent' */}
 
     return (
         <>
-            <Headercss>Albums List </Headercss>
-            <Container>
+            <Headercss >Albums List </Headercss>
+      
+            <Container >
                 {count2.map((item) => (
                     <FlexContainer key={item.id}>
                         <Cartcontainer>
@@ -25,7 +27,6 @@ function AlbumsList() {
                             < Textcss>
                                 Название альбома: <br /> {item.title}
                             </Textcss>
-
                             {/* <NavLink to={`https://jsonplaceholder.typicode.com/albums/${item.id}/photos`} > Посмотреть альбом №{item.id}</NavLink> */}
                             <NavLink to={`/${item.id}`} > Посмотреть альбом №{item.id}</NavLink>
 

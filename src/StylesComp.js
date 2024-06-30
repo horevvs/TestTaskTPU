@@ -60,6 +60,13 @@ export const Img = styled.div`
    
 `;
 
+export const OpemModal = styled.div`
+    padding: 10px;
+    margin: 5px;
+  
+   
+`;
+
 
 export const Headercss = styled.div`
     padding: 20px;
